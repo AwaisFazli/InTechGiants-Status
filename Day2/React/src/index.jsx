@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import ReactDOM from "react-dom";
+import App from "./App";
 
-const Calculator = () => {
-  return <div>Welcome to React App</div>;
-};
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<Calculator />);
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById("root")
+);
