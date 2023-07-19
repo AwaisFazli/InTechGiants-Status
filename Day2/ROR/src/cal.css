@@ -1,0 +1,64 @@
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  margin: auto;
+  padding: 1rem;
+  background-color: black;
+  border-radius: 0.8rem;
+  width: 15rem; /* Adjust the width to your preference */
+  height: 20rem; /* Adjust the height to your preference */
+}
+
+.screen {
+  margin-bottom: 1.5rem;
+}
+
+input {
+  height: 3rem; /* Adjust the height to your preference */
+  width: 95%;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(145, 145, 145);
+  color: aliceblue;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1.5rem; /* Adjust the font size to your preference */
+  font-weight: 200;
+  text-align: right;
+  padding: 5px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2px;
+}
+
+button {
+  display: inline;
+  height: 2rem;
+  /* width: 3rem; */
+  min-width: 3rem;
+  border-radius: 4px;
+  border: none;
+  margin: 3px;
+  padding: 3px;
+  background-color: rgb(145, 145, 145);
+  font-weight: 600;
+  font-size: medium;
+  color: rgb(255, 255, 255);
+}
+
+button#clear {
+  grid-column: 1 / span 2;
+}
+
+button#equal {
+  grid-column: span 2;
+}
+
+.highlights {
+  background-color: rgb(11, 192, 192);
+}
