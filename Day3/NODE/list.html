@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Array Data as List:</h2>
+    <ul id="list-container"></ul>
+
+    <input type="text" id="input-field" />
+    <button onclick="addItemToList()">Submit</button>
+    <script>
+      const dataArray = ["Awais", "Waqas", "1", "2"];
+      const listContainer = document.getElementById("list-container");
+
+      function showArrayAsList(dataArray) {
+        listContainer.innerHTML = "";
+        dataArray.forEach((item) => {
+          const liElement = document.createElement("li");
+          liElement.textContent = item;
+          listContainer.appendChild(liElement);
+        });
+      }
+
+      function addItemToList() {
+        const inputField = document.getElementById("input-field");
+        const newItem = inputField.value.trim(); // Get the input value and remove leading/trailing spaces
+
+        if (newItem !== "") {
+          dataArray.push(newItem);
+          showArrayAsList(dataArray);
+          inputField.value = ""; // Clear the input field after adding the item
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        showArrayAsList(dataArray);
+      });
+    </script>
+  </body>
+</html>

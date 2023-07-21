@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="ptag">Hello Man</p>
+
+    <button onclick="rbtn()">Remove P</button>
+    <button onclick="sbtn()">Show P</button>
+
+    <script>
+      function rbtn() {
+        var pTag = document.getElementsByTagName("p")[0];
+        pTag.style.display = "none";
+      }
+      function sbtn() {
+        var pTag = document.getElementsByTagName("p")[0];
+        pTag.style.display = "block";
+      }
+    </script>
+  </body>
+</html>
